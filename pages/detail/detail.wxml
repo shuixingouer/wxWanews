@@ -1,0 +1,10 @@
+<!--detail.wxml-->
+<import src="../detailContent/detailContent.wxml"/>
+<import src="../../wxParse/wxParse.wxml"/>
+<import src="../mainList/mainList.wxml" />
+<view class="{{dataList.type==0 ? 'center':''}}">
+    <!--<template is="type0" data="{{dataList}}" wx:if="{{dataList.type == 0 || dataList.type ==  4}}"/>-->
+    <template is="wxParse" data="{{wxParseData:article.nodes}}" wx:if="{{dataList.type == 0 || dataList.type ==  4}}"/>
+    <template is="type1" data="{{dataList}}" wx:if="{{dataList.type == 1 || dataList.type ==  6}}"/>
+    <template is="type2" data="{{dataList}}" wx:if="{{dataList.type == 2}}"/>
+</view>

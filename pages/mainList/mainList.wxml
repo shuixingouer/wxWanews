@@ -1,0 +1,70 @@
+<template name="showstyle0">
+    <view class="box">
+        <text class="title">{{item.title}}</text>
+        <text class="desc" hidden="{{item.desc ? false : true}}">{{item.desc}}</text>
+        <text class="bottom">
+            <text>{{item.webName}}</text>
+            <text>{{item.createdAt}}</text>
+        </text>
+    </view>
+</template>
+<template name="showstyle1">
+    <view class="box">
+        <view class="left">
+            <image class="img" src="{{item.images[0].imageUrl}}" mode="aspectFill" binderror="errImg" data-err-img="{{testImg}}">  
+</image>
+        </view>
+        <view class="right">
+            <text class="title">{{item.title}}</text>
+            <text class="desc" hidden="{{item.desc ? false : true}}">{{item.desc}}</text>
+            <text class="bottom">
+                <text>{{item.webName}}</text>
+                <text>{{item.createdAt}}</text>
+            </text>
+        </view>
+        <view class="clear"></view>
+    </view>
+</template>
+<template name="showstyle2">
+    <view class="box st2">
+        <text class="title">{{item.title}}</text>
+        <text class="desc" hidden="{{item.desc ? false : true}}">{{item.desc}}</text>
+        <image class="img" src="{{item.images[0].imageUrl}}" mode="aspectFill" binderror="errImg" data-err-img="{{testImg}}">  
+</image>
+        <text class="bottom">
+            <text>{{item.webName}}</text>
+            <text>{{item.createdAt}}</text>
+        </text>
+    </view>
+</template>
+<template name="showstyle3">
+    <view class="box st3">
+        <text class="title">{{item.title}}</text>
+        <text class="desc" hidden="{{item.desc ? false : true}}">{{item.desc}}</text>
+        <view>
+            <image class="img first" src="{{item.images[0].imageUrl}}" mode="aspectFill" binderror="errImg" data-err-img="{{testImg}}">  
+</image> 
+            <image class="img" src="{{item.images[1].imageUrl}}" mode="aspectFill" binderror="errImg" data-err-img="{{testImg}}">  
+</image>
+            <image class="img" src="{{item.images[2].imageUrl}}" mode="aspectFill" binderror="errImg" data-err-img="{{testImg}}">  
+</image>
+        </view>
+        <text class="bottom">
+            <text>{{item.webName}}</text>
+            <text>{{item.createdAt}}</text>
+        </text>
+    </view>
+</template>
+<template name="showstyle4">
+    <view class="box">
+        <text class="title">{{item.title}}</text>
+        <text class="desc" hidden="{{item.desc ? false : true}}">{{item.desc}}</text>
+        <image class="img" src="{{item.images[0].imageUrl}}"  mode="aspectFill" binderror="errImg" data-err-img="{{testImg}}">  
+</image>
+        <text class="count">{{item.imageCount}}</text>
+        <text class="bottom">
+            <text>{{item.webName}}</text>
+            <text>{{item.createdAt}}</text>
+        </text>
+    </view>
+</template>

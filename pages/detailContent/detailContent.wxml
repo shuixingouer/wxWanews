@@ -1,0 +1,32 @@
+<import src="../../wxParse/wxParse.wxml"/>
+<import src="../mainList/mainList.wxml" />
+<!--0:新闻 4:段子-->
+<!--<template name="type0">
+    <view class="center">
+        <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+        {{dataList.body}}
+    </view>
+</template>-->
+<!--1:组图 6:图集-->
+<template name="type1">
+    <view class="tuji">
+    </view>
+</template>
+<!--2:话题-->
+<template name="type2">
+    <view class="topic">
+        <view class="header">
+            <image class="img" src="{{dataList.images[0].imageUrl}}" mode="aspectFill"></image>
+            <text class="down">{{dataList.body}}</text> 
+        </view>
+        <block wx:for="{{topic}}" wx:for-item="item">
+          <navigator url="../detail/detail?id={{item.id}}" data-showstyle="{{item.showStyle}}">
+            <template is="showstyle0" data="{{item}}" wx:if="{{item.showStyle == 0}}"/>
+            <template is="showstyle1" data="{{item}}" wx:if="{{item.showStyle == 1}}"/>
+            <template is="showstyle2" data="{{item}}" wx:if="{{item.showStyle == 2}}"/>
+            <template is="showstyle3" data="{{item}}" wx:if="{{item.showStyle == 3}}"/>
+            <template is="showstyle4" data="{{item}}" wx:if="{{item.showStyle == 4}}"/>
+          </navigator>
+        </block>
+    </view>
+</template>

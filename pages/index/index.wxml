@@ -1,0 +1,23 @@
+<!--index.wxml-->
+<import src="../mainList/mainList.wxml" />
+
+<view class="menu">
+  <view class="item {{currentTopItem==item.channelId ? 'active' : ''}}"  wx:for="{{topTabItems}}" wx:for-index="idx" data-idx="{{idx}}" data-channelid="{{item.channelId}}" bindtap="switchTab">
+    {{item.channelName}}
+  </view>
+</view>
+<swiper class="swiper" bindchange="bindChange" duration="300" style="height:{{swiperHeight}}px">
+    <swiper-item>
+      <scroll-view class="scrollView" scroll-y="true" bindscrolltolower="loadMoreData" >
+        <block wx:for="{{allDataList}}" wx:for-item="item">
+          <navigator url="../detail/detail?id={{item.id}}" data-showstyle="{{item.showStyle}}">
+            <template is="showstyle0" data="{{item}}" wx:if="{{item.showStyle == 0}}"/>
+            <template is="showstyle1" data="{{item}}" wx:if="{{item.showStyle == 1}}"/>
+            <template is="showstyle2" data="{{item}}" wx:if="{{item.showStyle == 2}}"/>
+            <template is="showstyle3" data="{{item}}" wx:if="{{item.showStyle == 3}}"/>
+            <template is="showstyle4" data="{{item}}" wx:if="{{item.showStyle == 4}}"/>
+          </navigator>
+        </block>
+      </scroll-view>
+    </swiper-item>
+</swiper>

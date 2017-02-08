@@ -1,0 +1,35 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/detail/detail",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#f44336",
+    "navigationBarTitleText": "Wanews",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "color": "#999",
+    "borderStyle": "black",
+    "selectedColor": "#f44336",
+    "backgroundColor": "white",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "images/tabBar/tabBar_essence_icon.png",
+      "selectedIconPath": "images/tabBar/tabBar_essence_click_icon.png"
+    },
+    {
+      "pagePath": "",
+      "text": "搜索",
+      "iconPath": "images/tabBar/tabBar_me_icon.png",
+      "selectedIconPath": "images/tabBar/tabBar_me_click_icon.png"
+    }]
+  },
+  "networkTimeout": {
+    "request": 10000
+  },
+  "debug":true
+}
